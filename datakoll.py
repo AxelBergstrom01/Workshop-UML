@@ -1,4 +1,5 @@
 import pandas as pd
+from sklearn.preprocessing import StandardScaler
 
 # 1. Läs in dataset
 df = pd.read_csv("osm_goteborg_pois.csv")
@@ -14,3 +15,8 @@ X = df[feature_cols].copy()
 print(X.head())
 
 print(X.describe())
+
+scaler = StandardScaler()
+X_scaled = pd.DataFrame(scaler.fit_transform(X), columns=X.columns)
+
+print(X_scaled.describe())
