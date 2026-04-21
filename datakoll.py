@@ -16,3 +16,6 @@ print(df.isnull().sum())
 
 print("\n=== HEAD ===")
 print(df.head())
+
+feature_cols = ["lat", "lon"]
+X = df[feature_cols].copy()feature_cols = ["lat", "lon"]
