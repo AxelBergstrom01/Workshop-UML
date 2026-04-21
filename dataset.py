@@ -1,4 +1,5 @@
 import osmnx as ox
+print("SCRIPT STARTAR")
 
 tags = {
     "amenity": True,
