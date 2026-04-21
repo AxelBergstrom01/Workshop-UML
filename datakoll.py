@@ -1,20 +1,14 @@
 import pandas as pd
 
-# Ladda dataset
+# 1. Läs in dataset
 df = pd.read_csv("osm_goteborg_pois.csv")
 
-print("=== INFO ===")
-print(df.info())
-
-print("\n=== BESKRIVNING ===")
-print(df.describe())
-
+# 2. Hantera NaN
 df = df.fillna("none")
 
-print("\n=== MISSING VALUES ===")
-print(df.isnull().sum())
+# 3. Välj features
+feature_cols = ["lat", "lon"]
+X = df[feature_cols].copy()
 
-print("\n=== HEAD ===")
-print(df.head())
-
-
+# 4. Kolla att det funkar
+print(X.head())
