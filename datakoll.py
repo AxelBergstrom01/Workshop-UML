@@ -9,10 +9,10 @@ print(df.info())
 print("\n=== BESKRIVNING ===")
 print(df.describe())
 
+df = df.fillna("none")
+
 print("\n=== MISSING VALUES ===")
 print(df.isnull().sum())
-
-df = df.fillna("none")
 
 print("\n=== HEAD ===")
 print(df.head())
