@@ -12,3 +12,5 @@ X = df[feature_cols].copy()
 
 # 4. Kolla att det funkar
 print(X.head())
+
+print(X.describe())
